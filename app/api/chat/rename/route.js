@@ -22,7 +22,7 @@ export async function POST(req){
         await connectDB()
         await Chat.findOneAndUpdate({_id:chatId, userId}, {name});
 
-        return NextResponse.json({success:two, message: "chat renamed"});
+        return NextResponse.json({success:true, message: "chat renamed"});
 
     }catch(error){
         return NextResponse.json({success: false, error:error.message});

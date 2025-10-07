@@ -42,7 +42,13 @@ const Sidebar = ({expand, setExpand}) => {
             <div className={`mt-8 text-white/25 text-sm ${expand ? 'block' : 'hidden'}`}>
                 <p className='my-1'>Recents</p>
                 {/* chatLabel */}
-                {chats.map((chat, index)=> <ChatLabel key={index} name={chat.name} id={chat.id} openMenu={openMenu} setOpenMenu={setOpenMenu} />)}
+                {chats.map((chat, index)=> (
+                    <ChatLabel
+                    key={index}
+                    name={chat.name}
+                    id={chat._id}
+                    openMenu={openMenu}
+                    setOpenMenu={setOpenMenu} />))}
 
             </div>
         </div>
