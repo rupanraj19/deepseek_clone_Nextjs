@@ -12,7 +12,8 @@ export async function POST(req){
         "svix-id" : headerPayload.get("svix-id"),
         "svix-timestamp" : headerPayload.get("svix-timestamp"),
         "svix-signature" : headerPayload.get("svix-signature"),
-    }
+    };
+
     //  get the payload and verify it
     const payload = await req.json();
     const body = JSON.stringify(payload);
